@@ -44,12 +44,14 @@ function App() {
     );
     setTasks(newTasks);
   };
+  const totalTasks = tasks.length;
+  const completedTasks = tasks.filter(task => task.isDone).length;
 
   return (
     <div className="col-12 m-2 p-0">
       <div className="container text-center">
         <h2>Todo List</h2>
-        <span className="m-2">All : () Done : ()</span>
+        <span className="m-2">All : ({totalTasks}) Done : ({completedTasks})</span>
         {/* Modal Component */}
         <button
           type="button"
